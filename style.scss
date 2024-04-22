@@ -27,14 +27,26 @@ header {
   .header-container {
     padding: 2rem;
     @include flex-column;
+
+    @media (min-width: 768px) {
+      @include flex-row;
+      gap: 2rem;
+    }
   }
 
   .logo {
     @include flex-column;
+
+    @media (min-width: 768px) {
+      order: 1;
+      text-align: center;
+    }
   }
 
   .image-logo img {
     width: 15%;
+    min-width: 50px;
+    max-width: 50px;
     filter: invert(58%) sepia(36%) saturate(675%) hue-rotate(358deg) brightness(92%) contrast(95%);
   }
 
@@ -43,24 +55,54 @@ header {
     color: $dark-behind_color;
     font-weight: bold;
     line-height: 0.8;
+
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
   .brand-area {
     font-size: 1rem;
     font-weight: bold;
     color: $main-color;
+
+    @media (min-width:768px) {
+      font-size: 0.8rem;
+      text-wrap: nowrap;
+    }
   }
 
   .contact {
     display: flex;
     padding: 0.5rem 0;
     gap: 1rem;
+
+    @media (min-width: 768px) {
+      align-items: center;
+    }
+  }
+
+  .contact-left {
+    @media (min-width: 768px) {
+      order: 0;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .contact-right {
+    @media (min-width: 768px) {
+      order: 2;
+    }
   }
 
   .box-image {
     background-color: $main-color;
     height: 100%;
     padding: 0.5rem;
+
+    @media (min-width: 768px) {
+      height: fit-content;
+    }
   }
 
   .box-image img {
@@ -71,6 +113,10 @@ header {
   .contact-title {
     color: $main-color;
     font-weight: bold;
+
+    @media (min-width: 768px) {
+      font-size: 0.8rem;
+    }
   }
 
   .contact-title span {
@@ -79,6 +125,10 @@ header {
 
   .contact-description {
     color: $paragraph_color;
+
+    @media (min-width: 768px) {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -90,6 +140,10 @@ header {
   font-family: $primary-font;
   padding: 5rem 2.5rem;
   position: relative;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 5rem 1rem;
+  }
 
 
   .navbar-container {
@@ -107,6 +161,10 @@ header {
 
   .icon img {
     width: 1.5rem;
+
+    @media (min-width: 768px) {
+      width: 1.3rem;
+    }
   }
 
   .pages {
@@ -119,6 +177,11 @@ header {
     color: $dark-behind_color;
     font-size: 1.2rem;
     font-weight: 600;
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+      font-weight: 500;
+    }
   }
 
   #top {
@@ -174,6 +237,10 @@ header {
 .simple-card_container {
   background-color: $primary-bgcolor;
   padding: 4rem 1rem;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 4rem 0rem;
+  }
 }
 
 .section {
@@ -198,17 +265,31 @@ header {
     font-family: $secondary-font;
     color: $sub-topic_color;
     font-size: 2rem;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 3rem;
+    }
   }
 }
 
 .black-section {
   background-color: $primary-bgcolor;
 
+  @media (min-width: 768px) and (max-width:1024px) {
+    @include flex-row;
+  }
+
   .sub-white {
     font-family: $secondary-font;
     color: $dark-behind_color;
     text-align: center;
+
+    @media (min-width:768px) and (max-width: 1024px) {
+      width: 50%;
+      font-size: 3rem;
+    }
   }
+
 
   .section-description {
     font-family: $primary-font;
@@ -216,12 +297,22 @@ header {
     color: $paragraph_color;
     text-align: center;
     padding-top: 1rem;
+
+    @media (min-width:768px) and (max-width: 1024px) {
+      width: 70%;
+    }
   }
 
   .about-image img {
     width: 100%;
     position: relative;
     top: 6rem;
+  }
+
+  .about-image {
+    @media (min-width:768px) and (max-width: 1024px) {
+      padding: 0rem 3rem;
+    }
   }
 }
 
@@ -315,6 +406,10 @@ header {
   width: 100%;
   padding: 2rem 0;
 
+  @media (min-width: 768px) and (max-width: 1024px) {
+    position: relative;
+  }
+
   .reminder-content {
     @include flex-column;
     padding: 1rem 0.5rem;
@@ -326,6 +421,11 @@ header {
     color: $dark-behind_color;
     font-size: 2rem;
     font-weight: 500;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
   }
 
   .reminder-sub {
@@ -336,6 +436,14 @@ header {
 
   .reminder-button {
     padding-top: 1rem;
+
+    .reminder-button_absolute {
+      @media (min-width: 768px) and (max-width: 1024px) {
+        position: absolute;
+        top: 3rem;
+        right: 10rem;
+      }
+    }
   }
 
   .reminder-btn {
@@ -345,6 +453,13 @@ header {
     font-family: $primary-font;
     padding: 1rem;
     font-size: 0.8rem;
+
+    .reminder-btn_absolute {
+      @media (min-width: 768px) and (max-width: 1024px) {
+        position: absolute;
+        top: 0;
+      }
+    }
   }
 
   .reminder-btn_white {
@@ -370,6 +485,20 @@ footer {
   .footer-container {
     @include flex-column;
     padding: 6rem 0.5rem 0rem 0.5rem;
+
+    @media (min-width: 768px) {
+      @include flex-row;
+      padding: 6rem 1rem 0rem 1rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  .logo-social {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
   }
 
   .logo {
@@ -429,8 +558,19 @@ footer {
   .posts-container {
     @include flex-column;
     padding-top: 2rem;
+
+    @media (min-width: 768px) and (max-width: 1024px){
+      width: 45%;
+    }
   }
 
+    .sub-nav{
+      @media (min-width: 768px) and (max-width: 1024px){
+        display: flex;
+        width: 100%;
+        padding-top: 1rem;
+      }
+    }
   .nav-title {
     color: $dark-behind_color;
     font-size: 1.2rem;
@@ -441,6 +581,11 @@ footer {
   .footer-nav {
     @include flex-column;
     padding: 1.5rem 0;
+
+    @media (min-width: 768px) and (max-width: 1024px){
+      width: 50%;
+      padding: unset;
+    }
 
     .explore-links {
       @include flex-column;
@@ -456,6 +601,10 @@ footer {
   .questions {
     @include flex-column;
     padding-bottom: 5rem;
+
+    @media (min-width: 768px) and (max-width: 1024px){
+      width: 50%;
+    }
 
     .contact-way_container {
       display: flex;
@@ -479,19 +628,23 @@ footer {
     }
   }
 
-  .rights{
+  .rights {
     background-color: $rights-bgcolor;
     padding: 3rem 0;
     display: flex;
     justify-content: center;
 
-    .copy{
+    @media (min-width: 768px) and (max-width: 1024px){
+      flex-grow: 1;
+    }
+
+    .copy {
       color: $paragraph_color;
       font-size: 0.8rem;
       text-align: center;
     }
 
-    .Colorlib-footer{
+    .Colorlib-footer {
       color: $main-color;
     }
   }
