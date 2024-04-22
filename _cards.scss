@@ -1,0 +1,234 @@
+@import "variables";
+@import "mixins";
+
+.simple-card {
+  @include flex-column;
+  gap: 1rem;
+
+  &_content {
+    display: flex;
+    gap: 2rem;
+    background-color: $tertiary-bgcolor;
+    padding: 2rem;
+  }
+
+  .content-image {
+    background-color: $primary-bgcolor;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+
+  .content-image img {
+    width: 50px;
+    padding: 0.5rem;
+    filter: invert(50%);
+  }
+
+  .content-title {
+    font-family: $primary-font;
+    color: $dark-behind_color;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .content-description {
+    font-family: $primary-font;
+    color: $main-color;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+}
+
+.cards-container {
+  @include flex-column;
+  padding: 4rem 0;
+  gap: 2rem;
+
+  .card-content {
+    @include flex-column;
+    background-color: $card-bgcolor;
+    position: relative;
+  }
+
+  .card-top_image img {
+    width: 100%;
+  }
+
+  .over-image {
+    position: absolute;
+    background-color: $secondary-bgcolor;
+    border-radius: 50%;
+    bottom: 9rem;
+    left: 1rem;
+  }
+
+  .over-image img {
+    filter: invert(58%) sepia(36%) saturate(675%) hue-rotate(358deg) brightness(92%) contrast(95%);
+    width: 4rem;
+    padding: 0.5rem;
+  }
+
+  .over-image_upper {
+    bottom: 12rem;
+  }
+
+  .card-text {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card-title {
+    font-family: $secondary-font;
+    color: $card-title_color;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .card-description {
+    font-family: $primary-font;
+    color: $paragraph_color;
+  }
+
+}
+
+.simple-card_lighter {
+  //content
+  background-color: inherit;
+  gap: 1rem;
+  padding: 2rem 0rem;
+
+
+  .content-image_lighter {
+    background-color: $perfomance-image_bgcolor;
+  }
+
+  .content-image_lighter img {
+    width: 4rem;
+    filter: invert(58%) sepia(36%) saturate(675%) hue-rotate(358deg) brightness(92%) contrast(95%);
+  }
+
+  .content-title_thin {
+    font-family: $secondary-font;
+    font-size: 1.1rem;
+  }
+
+  .content-description_gray {
+    color: $paragraph_color;
+    font-weight: normal;
+  }
+}
+
+.cards-hover_container {
+  //card recent case
+  @include flex-column;
+  gap: 3rem;
+  padding-top: 3rem;
+
+  .card-hover_content {
+    @include flex-column;
+  }
+
+  .bg-image {
+    width: 100%;
+    position: relative;
+  }
+
+  .bg-image img {
+    width: 100%;
+  }
+
+  .higher {
+    height: 17.5rem;
+    object-fit: cover;
+  }
+
+  .card-hover_text {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .card-hover_title {
+    font-family: $secondary-font;
+    color: $dark-behind_color;
+  }
+
+  .card-hover_description {
+    font-family: $primary-font;
+    color: $paragraph_color;
+  }
+}
+
+.customer-card_container {
+  @include flex-column;
+  gap: 1.5rem;
+  padding-top: 2rem;
+
+  .customer-card_content {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: $card-bgcolor;
+    padding: 2rem;
+    font-family: $primary-font;
+  }
+
+  .customer-info {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  .customer-info img {
+    width: 5rem;
+    border-radius: 50%;
+  }
+
+  .name {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .post {
+    color: $main-color;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .customer-feedback {
+    color: $sub-topic_color;
+    font-size: 0.9rem;
+  }
+}
+
+.simple-card_footer {
+
+  .simple-card_content {
+    padding: 0;
+    
+    .footer-card_image img {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 5%;
+      object-fit: cover;
+    }
+    .post-title{
+      color: $paragraph_color;
+      font-weight: 600;
+    }
+    .date{
+      color: $main-color;
+      font-size: 0.8rem;
+    }
+    .author{
+      color: $main-color;
+      font-size: 0.8rem;
+    }
+    .comments{
+      color: $main-color;
+      font-size: 0.8rem;
+    }
+  }
+}
