@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-@mixin flex-row{
+@mixin flex-row_reverse{
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }

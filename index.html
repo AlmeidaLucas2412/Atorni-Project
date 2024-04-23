@@ -76,7 +76,7 @@
       </div>
     </section>
     <section class="simple-card_container">
-      <div class="simple-card">
+      <div class="simple-card simple-card_top">
         <div class="simple-card_content">
           <div class="content-image">
             <img src="./images/lawyer.svg" alt="Laywer">
@@ -237,7 +237,7 @@
               <label for="email">Email Address</label>
               <input class="request" type="email" placeholder="Email">
             </div>
-            <div class="box">
+            <div class="box full-width_desktop">
               <label for="subject">Select Subject</label>
               <select class="request" name="subject">
                 <option value="value1" disabled selected>Practice Areas</option>
@@ -249,7 +249,7 @@
                 <option value="value7">Real State Law</option>
               </select>
             </div>
-            <div class="box">
+            <div class="box full-width_desktop">
               <label for="message">Message</label>
               <textarea class="request" name="message" form="evaluation" placeholder="Message"></textarea>
             </div>
@@ -308,8 +308,10 @@
     </section>
     <section class="reminder">
       <div class="reminder-content">
-        <h2 class="reminder-title">Are You Facing Criminal Charges?</h2>
-        <p class="reminder-sub"> We are waiting for your call</p>
+        <div class="reminder-text">
+          <h2 class="reminder-title">Are You Facing Criminal Charges?</h2>
+          <p class="reminder-sub"> We are waiting for your call</p>
+        </div>
         <div class="reminder-button  reminder-button_absolute">
           <a class="reminder-btn" href="#">Get in Touch</a>
         </div>
@@ -406,7 +408,6 @@
       </div>
     </section>
     <section class="reminder">
-      <div class="overlay"></div>
       <div class="reminder-content reminder-content_center">
         <h2 class="reminder-title">Need Legal Advicer?</h2>
         <div class="reminder-button">
@@ -419,24 +420,24 @@
   <footer>
     <section class="footer-container">
       <div class="logo-social">
-      <div class="logo">
-        <div class="image-logo">
-          <img src="./images/balance.svg" alt="Justice Balance">
+        <div class="logo">
+          <div class="image-logo">
+            <img src="./images/balance.svg" alt="Justice Balance">
+          </div>
+          <div class="brand">
+            <p class="brand-name">Atorni</p>
+            <p class="brand-area">Lawfirm Agency</p>
+          </div>
         </div>
-        <div class="brand">
-          <p class="brand-name">Atorni</p>
-          <p class="brand-area">Lawfirm Agency</p>
+        <div class="found-us">
+          <p class="social-info">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+        </div>
+        <div class="social-media">
+          <a href="#"><img src="./images/twitter.svg" alt="Twitter logo"></a>
+          <a href="#"><img src="./images/facebook.svg" alt="Facebook logo"></a>
+          <a href="#"><img src="./images/instagram.svg" alt="Instagram logo"></a>
         </div>
       </div>
-      <div class="found-us">
-        <p class="social-info">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-      </div>
-      <div class="social-media">
-        <a href="#"><img src="./images/twitter.svg" alt="Twitter logo"></a>
-        <a href="#"><img src="./images/facebook.svg" alt="Facebook logo"></a>
-        <a href="#"><img src="./images/instagram.svg" alt="Instagram logo"></a>
-      </div>
-    </div>
       <div class="posts-container">
         <p class="nav-title">Recent Posts</p>
         <div class="simple-card simple-card_footer">
@@ -465,48 +466,47 @@
         </div>
       </div>
       <div class="sub-nav">
-      <div class="footer-nav">
-        <p class="nav-title">Explore</p>
-        <div class="nav-links">
-          <ul class="explore-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Practice Areas</a></li>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">Attorneys</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="questions">
-        <p class="nav-title">Have a Question?</p>
-        <div class="contact-way_container">
-          <div class="contact-way_footer">
-            <div class="contact-icon">
-              <img src="./images/map.svg" alt="Map">
-            </div>
-            <p class="howto">203 Fake ST. Mountain View, San Francisco, California, USA</p>
-          </div>
-          <div class="contact-way_footer">
-            <div class="contact-icon">
-              <img src="./images/map.svg" alt="Paper Plane">
-            </div>
-            <p class="howto">+2 392 3929 210</p>
-          </div>
-          <div class="contact-way_footer">
-            <div class="contact-icon">
-              <img src="./images/plane.svg" alt="Map">
-            </div>
-            <p class="howto">info@yourdomain.com</p>
+        <div class="footer-nav">
+          <p class="nav-title">Explore</p>
+          <div class="nav-links">
+            <ul class="explore-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Practice Areas</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Attorneys</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
           </div>
         </div>
-      </div>
-    </div>
-      <div class="rights">
-        <p class="copy">Copyright₢2024 All rights reserved | This template is made with ♥ by <a class="Colorlib-footer" href="#">Colorib</a></p>
+        <div class="questions">
+          <p class="nav-title">Have a Question?</p>
+          <div class="contact-way_container">
+            <div class="contact-way_footer">
+              <div class="contact-icon">
+                <img src="./images/map.svg" alt="Map">
+              </div>
+              <p class="howto">203 Fake ST. Mountain View, San Francisco, California, USA</p>
+            </div>
+            <div class="contact-way_footer">
+              <div class="contact-icon">
+                <img src="./images/map.svg" alt="Paper Plane">
+              </div>
+              <p class="howto">+2 392 3929 210</p>
+            </div>
+            <div class="contact-way_footer">
+              <div class="contact-icon">
+                <img src="./images/plane.svg" alt="Map">
+              </div>
+              <p class="howto">info@yourdomain.com</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </footer>
-
+  <div class="rights">
+    <p class="copy">Copyright₢2024 All rights reserved | This template is made with ♥ by <a class="Colorlib-footer" href="#">Colorib</a></p>
+  </div>
 </body>
 
 </html>
