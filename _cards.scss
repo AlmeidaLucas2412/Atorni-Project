@@ -28,12 +28,13 @@
       border-radius: 50%;
       padding: 0.5rem;
       height: fit-content;
-    }
 
-    &__image img {
-      width: 50px;
-      padding: 0.5rem;
-      filter: invert(50%);
+
+      img {
+        width: 50px;
+        padding: 0.5rem;
+        filter: invert(50%);
+      }
     }
 
     .content__text {
@@ -238,12 +239,11 @@
       color: $paragraph_color;
       font-weight: normal;
 
-      @media (min-width: 768px) and (max-width: 1024px) {
+      @media (min-width: 768px) {
         font-size: 1rem;
       }
 
       @media (min-width: 1025px) {
-        font-size: 1rem;
         text-wrap: wrap;
       }
     }
