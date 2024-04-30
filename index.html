@@ -39,74 +39,68 @@
     </div>
   </header>
   <nav class="navbar">
-    <div class="navbar__container">
-      <button class="icon">
-        <img src="./images/burger-menu-svgrepo-com.svg" alt="Hamburguer menu">
-      </button>
-      <div class="list">
-        <ul class="pages">
-          <li><a id="top" href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Attorneys</a></li>
-          <li><a href="#">Practice Areas</a></li>
-          <li><a href="#">Cases</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <button class="icon search">
-        <img src="./images/search.svg" alt="Magnifying Glass">
-      </button>
-    </div>
+    <button class="icon">
+      <img src="./images/burger-menu-svgrepo-com.svg" alt="Hamburguer menu">
+    </button>
+    <ul class="navbar__list">
+      <li><a id="top" href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Attorneys</a></li>
+      <li><a href="#">Practice Areas</a></li>
+      <li><a href="#">Cases</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="icon icon--search">
+      <img src="./images/search.svg" alt="Magnifying Glass">
+    </button>
   </nav>
   <main>
-    <section class="Introduction">
-      <div class="Introduction__container">
-        <div class="Introduction__title">
+    <section class="introduction">
+      <div class="introduction__container">
+        <div class="introduction__title">
           <h1>We Are Ready For a Fight Against Injustice</h1>
           <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
         </div>
-        <div class="btn">
-          <a class="make" href="#">MAKE AN APPOINTMENT</a>
-        </div>
+        <a href="#"><button class="button button--primary button--big">Make an Appointment</button></a>
       </div>
     </section>
     <section class="section section--card">
       <div class="simple__content simple__content--top">
-        <div class="simple__card">
-          <div class="simple__card__image">
+        <div class="simple-card">
+          <div class="simple-card__image">
             <img src="./images/lawyer.svg" alt="Laywer">
           </div>
           <div class="content__text">
-            <p class="content__text__title">1500</p>
-            <p class="content__text__description">QUALIFIED LAWYERS</p>
+            <p class="content__title">1500</p>
+            <p class="content__description">Qualified Lawyers</p>
           </div>
         </div>
-        <div class="simple__card">
-          <div class="simple__card__image">
+        <div class="simple-card">
+          <div class="simple-card__image">
             <img src="./images/hammer.svg" alt="Judge Hammer">
           </div>
           <div class="content__text">
-            <p class="content__text__title">2100</p>
-            <p class="content__text__description">SUCCESFULL CASES</p>
+            <p class="content__title">2100</p>
+            <p class="content__description">Succesfull Cases</p>
           </div>
         </div>
-        <div class="simple__card">
-          <div class="simple__card__image">
+        <div class="simple-card">
+          <div class="simple-card__image">
             <img src="./images/happy.svg" alt="Smiling Face">
           </div>
           <div class="content__text">
-            <p class="content__text__title">2700</p>
-            <p class="content__text__description">HAPPY CLIENTS</p>
+            <p class="content__title">2700</p>
+            <p class="content__description">Happy Clients</p>
           </div>
         </div>
-        <div class="simple__card">
-          <div class="simple__card__image">
+        <div class="simple-card">
+          <div class="simple-card__image">
             <img src="./images/award.svg" alt="Trophy">
           </div>
           <div class="content__text">
-            <p class="content__text__title">1010</p>
-            <p class="content__text__description">AWARDS E HONORS</p>
+            <p class="content__title">1010</p>
+            <p class="content__description">Awards & Honors</p>
           </div>
         </div>
       </div>
@@ -130,51 +124,43 @@
       </div>
       <div class="cards__container">
         <div class="card">
-          <div class="card__image">
-            <img src="./images/bank.webp" alt="Man working">
-          </div>
+          <img class="card__image card__image--higher" src="./images/bank.webp" alt="Man working">
           <div class="card__stamp">
             <img src="./images/balance.svg" alt="Justice Balance">
           </div>
           <div class="card__text">
-            <p class="card__text__title">Bank & Financial</p>
-            <p class="card__text__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p class="card__title">Bank & Financial</p>
+            <p class="card__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
           </div>
         </div>
         <div class="card">
-          <div class="card__image">
-            <img src="./images/personal.webp" alt="Woman working">
-          </div>
+          <img class="card__image" src="./images/personal.webp" alt="Woman working">
           <div class="card__stamp">
             <img src="./images/balance.svg" alt="Justice Balance">
           </div>
           <div class="card__text">
-            <p class="card__text__title">Personal Injury</p>
-            <p class="card__text__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p class="card__title">Personal Injury</p>
+            <p class="card__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
           </div>
         </div>
         <div class="card">
-          <div class="card__image">
-            <img src="./images/family.webp" alt="Family with a man, woman and two childrens">
-          </div>
+          <img class="card__image" src="./images/family.webp" alt="Family with a man, woman and two childrens">
           <div class="card__stamp">
             <img src="./images/balance.svg" alt="Justice Balance">
           </div>
           <div class="card__text">
-            <p class="card__text__title">Family Law</p>
-            <p class="card__text__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p class="card__title">Family Law</p>
+            <p class="card__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
           </div>
         </div>
         <div class="card">
-          <div class="card__image">
-            <img src="./images/criminal.webp" alt="Women working">
-          </div>
+          <img class="card__image" src="./images/criminal.webp" alt="Women working">
           <div class="card__stamp">
             <img src="./images/balance.svg" alt="Justice Balance">
           </div>
           <div class="card__text">
-            <p class="card__text__title">Criminal Law</p>
-            <p class="card__text__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p class="card__title">Criminal Law</p>
+            <p class="card__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
           </div>
         </div>
       </div>
@@ -187,31 +173,31 @@
           <p class="section__description section__description--left">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
         </div>
         <div class="simple__content simple__content--form">
-          <div class="simple__card simple__card--lighter">
-            <div class="simple__card__image simple__card__image--lighter">
+          <div class="simple-card simple-card--lighter">
+            <div class="simple-card__image simple-card__image--lighter">
               <img src="./images/balance.svg" alt="Justice balance">
             </div>
             <div class="content__text">
-              <h2 class="content__text__title content__text__title--thin">Get Legal Advices</h2>
-              <p class="content__text__description content__text__description--gray">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
+              <h2 class="content__title content__title--thin">Get Legal Advices</h2>
+              <p class="content__description content__description--gray">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
             </div>
           </div>
-          <div class="simple__card simple__card--lighter">
-            <div class="simple__card__image simple__card__image--lighter">
+          <div class="simple-card simple-card--lighter">
+            <div class="simple-card__image simple-card__image--lighter">
               <img src="./images/balance.svg" alt="Justice balance">
             </div>
-            <div class="content">
-              <h2 class="content__text__title content__text__title--thin">We Protect Just & Fight Injustice</h2>
-              <p class="content__text__description content__text__description--gray">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
+            <div class="content__text">
+              <h2 class="content__title content__title--thin">We Protect Just & Fight Injustice</h2>
+              <p class="content__description content__description--gray">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
             </div>
           </div>
-          <div class="simple__card simple__card--lighter">
-            <div class="simple__card__image simple__card__image--lighter">
+          <div class="simple-card simple-card--lighter">
+            <div class="simple-card__image simple-card__image--lighter">
               <img src="./images/balance.svg" alt="Justice balance">
             </div>
-            <div class="content">
-              <h2 class="content__text__title content__text__title--thin">Best Attorneys Team</h2>
-              <p class="content__text__description content__text__description--gray">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
+            <div class="content__text">
+              <h2 class="content__title content__title--thin">Best Attorneys Team</h2>
+              <p class="content__description content__description--gray">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
             </div>
           </div>
         </div>
@@ -219,7 +205,7 @@
       <div class="form__container">
         <form class="form">
           <div class="form__intro">
-            <p class="form__intro__title">DROP A MESSAGE</p>
+            <p class="form__intro__title">Drop a message</p>
             <h2 class="form__intro__subtitle">Free Case form</h2>
           </div>
           <div class="form__requirements">
@@ -248,7 +234,7 @@
               <textarea class="request" name="message" form="form" placeholder="Message"></textarea>
             </div>
             <div class="button">
-              <input class="btn" type="submit" value="Send Message">
+              <input class="button button--primary button--radius" type="submit" value="Send Message">
             </div>
           </div>
         </form>
@@ -264,8 +250,8 @@
           <div class="card__hover__bg">
             <img class="higher" src="./images/case-1.jpg" alt="">
             <div class="card__hover__text">
-              <h2 class="card__hover__text__title">Business Law</h2>
-              <p class="card__hover__text__description">Far far away behind the word</p>
+              <h2 class="card__hover__title">Business Law</h2>
+              <p class="card__hover__description">Far far away behind the word</p>
             </div>
           </div>
         </div>
@@ -273,8 +259,8 @@
           <div class="card__hover__bg">
             <img src="./images/case-2.jpg" alt="">
             <div class="card__hover__text">
-              <h2 class="card__hover__text__title">Business Law</h2>
-              <p class="card__hover__text__description">Far far away behind the word</p>
+              <h2 class="card__hover__title">Business Law</h2>
+              <p class="card__hover__description">Far far away behind the word</p>
             </div>
           </div>
         </div>
@@ -282,8 +268,8 @@
           <div class="card__hover__bg">
             <img src="./images/case-3.jpg" alt="">
             <div class="card__hover__text">
-              <h2 class="card__hover__text__title">Business Law</h2>
-              <p class="card__hover__text__description">Far far away behind the word</p>
+              <h2 class="card__hover__title">Business Law</h2>
+              <p class="card__hover__description">Far far away behind the word</p>
             </div>
           </div>
         </div>
@@ -291,8 +277,8 @@
           <div class="card__hover__bg">
             <img src="./images/case-4.jpg" alt="">
             <div class="card__hover__text">
-              <h2 class="card__hover__text__title">Business Law</h2>
-              <p class="card__hover__text__description">Far far away behind the word</p>
+              <h2 class="card__hover__title">Business Law</h2>
+              <p class="card__hover__description">Far far away behind the word</p>
             </div>
           </div>
         </div>
@@ -301,12 +287,10 @@
     <section class="reminder">
       <div class="reminder__content">
         <div class="reminder__text">
-          <h2 class="reminder__text__title">Are You Facing Criminal Charges?</h2>
-          <p class="reminder__text__sub"> We are waiting for your call</p>
+          <h2 class="reminder__title">Are You Facing Criminal Charges?</h2>
+          <p class="reminder__sub"> We are waiting for your call</p>
         </div>
-        <div class="reminder__button">
-          <a class="reminder__button__btn" href="#">Get in Touch</a>
-        </div>
+        <a href="#"><button class="button button--secondary">Get in Touch</button></a>
       </div>
     </section>
     <section class="section">
@@ -316,89 +300,84 @@
       </div>
       <div class="customer__container">
         <div class="customer__card">
-          <div class="customer__card__info">
+          <div class="customer__info">
             <img src="./images/customer-1.webp">
             <div class="badge">
               <p class="badge__name">Roger Scott</p>
-              <p class="badge__post">MARKETING MANAGER</p>
+              <p class="badge__post">Marketing Manager</p>
             </div>
           </div>
-          <p class="customer__card__feedback">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          <p class="customer__feedback">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
         </div>
         <div class="customer__card">
-          <div class="customer__card__info">
+          <div class="customer__info">
             <img src="./images/customer-2.webp">
             <div class="badge">
               <p class="badge__name">Roger Scott</p>
-              <p class="badge__post">MARKETING MANAGER</p>
+              <p class="badge__post">Marketing Manager</p>
             </div>
           </div>
-          <p class="customer__card__feedback">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          <p class="customer__feedback">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
         </div>
         <div class="customer__card">
-          <div class="customer__card__info">
+          <div class="customer__info">
             <img src="./images/customer-3.webp">
             <div class="badge">
               <p class="badge__name">Roger Scott</p>
-              <p class="badge__post">MARKETING MANAGER</p>
+              <p class="badge__post">Marketing Manager</p>
             </div>
           </div>
-          <p class="customer__card__feedback">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          <p class="customer__feedback">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
         </div>
       </div>
     </section>
     <section class="section">
-      <div class="blog-container">
-        <div class="section__intro">
-          <p class="section__intro__title">Blog</p>
-          <h2 class="section__intro__subtitle">Recent Blog</h2>
+
+      <div class="section__intro">
+        <p class="section__intro__title">Blog</p>
+        <h2 class="section__intro__subtitle">Recent Blog</h2>
+      </div>
+      <div class="cards__container">
+        <div class="card">
+          <img class="card__image" src="./images/post-1.webp" alt="Men working with laptops">
+          <div class="card__stamp card__stamp--upper">
+            <img src="./images/balance.svg" alt="Justice Balance">
+          </div>
+          <div class="card__text">
+            <p class="card__title">Main practice areas of the firm include admiralty</p>
+            <p class="card__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+          </div>
         </div>
-        <div class="cards__container">
-          <div class="card">
-            <div class="card__image">
-              <img src="./images/post-1.webp" alt="Men working with laptops">
-            </div>
-            <div class="card__stamp card__stamp--upper">
-              <img src="./images/balance.svg" alt="Justice Balance">
-            </div>
-            <div class="card__text">
-              <p class="card__text__title">Main practice areas of the firm include admiralty</p>
-              <p class="card__text__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
+        <div class="card">
+          <img class="card__image" src="./images/post-2.webp" alt="Men adn Woman working">
+          <div class="card__stamp card__stamp--upper">
+            <img src="./images/balance.svg" alt="Justice Balance">
           </div>
-          <div class="card">
-            <div class="card__image">
-              <img src="./images/post-2.webp" alt="Men adn Woman working">
-            </div>
-            <div class="card__stamp card__stamp--upper">
-              <img src="./images/balance.svg" alt="Justice Balance">
-            </div>
-            <div class="card__text">
-              <p class="card__text__title">Main practice areas of the firm include admiralty</p>
-              <p class="card__text__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
+          <div class="card__text">
+            <p class="card__title">Main practice areas of the firm include admiralty</p>
+            <p class="card__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
           </div>
-          <div class="card">
-            <div class="card__image">
-              <img src="./images/post-3.webp" alt="Men working">
-            </div>
-            <div class="card__stamp card__stamp--upper">
-              <img src="./images/balance.svg" alt="Justice Balance">
-            </div>
-            <div class="card__text">
-              <p class="card__text__title">Main practice areas of the firm include admiralty</p>
-              <p class="card__text__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
+        </div>
+        <div class="card">
+          <img class="card__image" src="./images/post-3.webp" alt="Men working">
+          <div class="card__stamp card__stamp--upper">
+            <img src="./images/balance.svg" alt="Justice Balance">
+          </div>
+          <div class="card__text">
+            <p class="card__title">Main practice areas of the firm include admiralty</p>
+            <p class="card__description">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
           </div>
         </div>
       </div>
     </section>
     <section class="reminder">
       <div class="reminder__content reminder__content--center">
-        <h2 class="reminder__text__title">Need Legal Advicer?</h2>
-        <div class="reminder__button">
-          <a class="reminder__button__btn" href="#">0-1230-456-7890</a>
-          <a class="reminder__button__btn--white" href="#">YOUREMAIL@EMAIL.COM</a>
+        <div class="reminder__text">
+          <h2 class="reminder__title">Need Legal Advicer?</h2>
+        </div>
+        <div class="reminder__buttons">
+          <a href="#"><button class="button button--secondary">0-1230-456-7890</button></a>
+          <a href="#"><button class="button button--tertiary">YOUREMAIL@EMAIL.COM</button></a>
         </div>
       </div>
     </section>
@@ -410,12 +389,10 @@
           <div class="social__logo__image">
             <img src="./images/balance.svg" alt="Justice Balance">
           </div>
-          <div class="social__brand">
-            <p class="social__brand__name">Atorni</p>
-            <p class="social__brand__area">Lawfirm Agency</p>
-          </div>
+          <p class="social__brand__name">Atorni</p>
+          <p class="social__brand__area">Lawfirm Agency</p>
         </div>
-          <p class="social__text">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+        <p class="social__text">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
         <div class="social__media">
           <a href="#"><img src="./images/twitter.svg" alt="Twitter logo"></a>
           <a href="#"><img src="./images/facebook.svg" alt="Facebook logo"></a>
@@ -425,26 +402,30 @@
       <div class="posts__container">
         <p class="nav__title">Recent Posts</p>
         <div class="simple__content simple__content--footer">
-          <div class="simple__card">
-            <div class="simple__card__image__footer">
+          <div class="simple-card">
+            <div class="simple-card__image__footer">
               <img src="./images/post-1.webp" alt="Men working with laptops">
             </div>
             <div class="content__text">
-              <p class="content__text__title">Main practice areas of the firm include admiralty</p>
-              <span class="content__text__date">Oct. 18, 2020</span>
-              <span class="content__text__author">Admin</span>
-              <span class="content__text__comments">19</span>
+              <p class="content__title content__title--footer">Main practice areas of the firm include admiralty</p>
+              <div class="content__info">
+                <span class="content__date">Oct. 18, 2020</span>
+                <span class="content__author">Admin</span>
+                <span class="content__comments">19</span>
+              </div>
             </div>
           </div>
-          <div class="simple__card">
-            <div class="simple__card__image__footer">
+          <div class="simple-card">
+            <div class="simple-card__image__footer">
               <img src="./images/post-2.webp" alt="Men and Woman working">
             </div>
             <div class="content__text">
-              <p class="content__text__title">Main practice areas of the firm include admiralty</p>
-              <span class="content__text__date">Oct. 18, 2020</span>
-              <span class="content__text__author">Admin</span>
-              <span class="content__text__comments">19</span>
+              <p class="content__title content__title--footer">Main practice areas of the firm include admiralty</p>
+              <div class="content__info">
+                <span class="content__date">Oct. 18, 2020</span>
+                <span class="content__author">Admin</span>
+                <span class="content__comments">19</span>
+              </div>
             </div>
           </div>
         </div>
@@ -452,13 +433,13 @@
       <div class="footer__nav">
         <div class="footer__nav__explore">
           <p class="nav__title">Explore</p>
-            <ul class="footer__nav__explore__links">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Practice Areas</a></li>
-              <li><a href="#">Case Studies</a></li>
-              <li><a href="#">Attorneys</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
+          <ul class="footer__nav__explore__links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Practice Areas</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Attorneys</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
         </div>
         <div class="footer__nav__questions">
           <p class="nav__title">Have a Question?</p>
@@ -486,9 +467,6 @@
       </div>
     </section>
   </footer>
-  <div class="rights">
-    <p class="copy">Copyright₢2024 All rights reserved | This template is made with ♥ by <a class="Colorlib-footer" href="#">Colorib</a></p>
-  </div>
 </body>
 
 </html>
