@@ -16,10 +16,12 @@
   height: -moz-fit-content;
   height: fit-content;
 }
-.simple-card__image img {
-  width: 50px;
+.simple-card__image svg {
+  width: 3.5rem;
+  height: 3.5rem;
   padding: 0.5rem;
-  filter: invert(50%);
+  fill: #ffffff;
+  vertical-align: middle;
 }
 @media (min-width: 1025px) {
   .simple-card .content {
@@ -103,12 +105,13 @@
     height: fit-content;
   }
 }
-.simple-card--lighter .simple-card__image--lighter img {
-  width: 4rem;
-  filter: invert(58%) sepia(36%) saturate(675%) hue-rotate(358deg) brightness(92%) contrast(95%);
+.simple-card--lighter .simple-card__image--lighter svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: #C18E3C;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .simple-card--lighter .simple-card__image--lighter img {
+  .simple-card--lighter .simple-card__image--lighter svg {
     padding: 0;
   }
 }
@@ -156,6 +159,14 @@
        object-fit: cover;
   }
 }
+@media (min-width: 1025px) {
+  .card__image--higher {
+    width: 308px;
+    height: 206px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 .card__stamp {
   position: absolute;
   background-color: #f7f7f7;
@@ -167,41 +178,41 @@
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .card__stamp {
-    left: 3rem;
-    right: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 24rem;
   }
 }
 @media (min-width: 1025px) {
   .card__stamp {
-    bottom: 12rem;
+    bottom: 11rem;
   }
 }
-.card__stamp img {
-  filter: invert(58%) sepia(36%) saturate(675%) hue-rotate(358deg) brightness(92%) contrast(95%);
-  width: 4rem;
+.card__stamp svg {
+  width: 4.5rem;
+  height: 4.5rem;
+  fill: #C18E3C;
   padding: 0.5rem;
 }
-.card .card__stamp--upper {
+.card__stamp--upper {
   background-color: #C18E3C;
   bottom: 12rem;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .card .card__stamp--upper {
-    bottom: 20rem;
-    left: 1rem;
+  .card__stamp--upper {
+    bottom: 24rem;
+    left: 3rem;
     right: auto;
   }
 }
 @media (min-width: 1025px) {
-  .card .card__stamp--upper {
+  .card__stamp--upper {
     bottom: 12rem;
     left: 0.5rem;
   }
 }
-.card .card__stamp--upper img {
-  filter: invert(1);
-  width: 5rem;
+.card__stamp--upper svg {
+  fill: #ffffff;
 }
 .card__text {
   padding: 2rem;
@@ -356,10 +367,6 @@
   box-sizing: border-box;
 }
 
-img {
-  width: 25px;
-}
-
 a {
   text-decoration: none;
 }
@@ -429,14 +436,13 @@ li {
     text-align: center;
   }
 }
-.header .logo__image {
-  width: 15%;
-  min-width: 50px;
-  max-width: 50px;
-  filter: invert(58%) sepia(36%) saturate(675%) hue-rotate(358deg) brightness(92%) contrast(95%);
+.header .logo svg {
+  width: 3rem;
+  height: 3rem;
+  fill: #C18E3C;
 }
 @media (min-width: 768px) {
-  .header .logo__image {
+  .header .logo svg {
     align-self: center;
   }
 }
@@ -476,11 +482,12 @@ li {
   background-color: #C18E3C;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 0.5rem;
+  padding: 0.3rem;
 }
-.header .contact .box__image img {
-  filter: invert(100%);
+.header .contact .box__image svg {
   width: 1.5rem;
+  height: 1.5rem;
+  fill: #ffffff;
   vertical-align: middle;
 }
 .header .contact .contact__title {
@@ -582,12 +589,16 @@ li {
   color: #ffffff;
   font-size: 1.2rem;
   font-weight: 600;
+  transition: 0.4s;
 }
 @media (min-width: 768px) {
   .navbar__list li a {
     font-size: 1rem;
     font-weight: 500;
   }
+}
+.navbar__list li a:hover {
+  color: #C18E3C;
 }
 .navbar__list .top {
   color: #C18E3C;
@@ -901,13 +912,14 @@ li {
 }
 
 .reminder {
-  background: linear-gradient(rgba(193, 142, 60, 0.896), rgba(193, 142, 60, 0.896)), url(./images/legal-advicer.webp);
+  background: url(./images/legal-advicer.webp);
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 2rem 0;
+  position: relative;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .reminder {
@@ -920,11 +932,21 @@ li {
     justify-content: center;
   }
 }
+.reminder .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #C18E3C;
+  filter: opacity(0.8);
+  z-index: 10;
+}
 .reminder__content {
   display: flex;
   flex-direction: column;
   padding: 1rem 0.5rem;
   gap: 0.5rem;
+  z-index: 15;
 }
 @media (min-width: 1025px) {
   .reminder__content {
@@ -1028,13 +1050,20 @@ footer .footer__container .social__logo {
 footer .footer__container .social__logo__image {
   padding-left: 1rem;
 }
-footer .footer__container .social__logo__image img {
-  width: 10%;
-  filter: invert(58%) sepia(36%) saturate(675%) hue-rotate(358deg) brightness(92%) contrast(95%);
+@media (min-width: 1025px) {
+  footer .footer__container .social__logo__image {
+    padding: unset;
+  }
+}
+footer .footer__container .social__logo__image svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: #C18E3C;
 }
 @media (min-width: 1025px) {
-  footer .footer__container .social__logo__image img {
-    width: 15%;
+  footer .footer__container .social__logo__image svg {
+    width: 3.5rem;
+    height: 3.5rem;
   }
 }
 footer .footer__container .social__logo .social__brand__name {
@@ -1063,9 +1092,10 @@ footer .footer__container .social__media a {
   border-radius: 50%;
   padding: 0.3rem 0.6rem;
 }
-footer .footer__container .social__media img {
+footer .footer__container .social__media svg {
   width: 1rem;
-  filter: invert(100%);
+  height: 1rem;
+  fill: #ffffff;
   vertical-align: middle;
 }
 footer .footer__container .posts__container {
@@ -1157,9 +1187,10 @@ footer .footer__container .footer__nav .footer__nav__questions .contact__us__con
   display: flex;
   gap: 1rem;
 }
-footer .footer__container .footer__nav .footer__nav__questions .contact__us__container .contact__us__icon img {
-  width: 1rem;
-  filter: invert(58%) sepia(36%) saturate(675%) hue-rotate(358deg) brightness(92%) contrast(95%);
+footer .footer__container .footer__nav .footer__nav__questions .contact__us__container .contact__us__icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #C18E3C;
 }
 footer .footer__container .footer__nav .footer__nav__questions .contact__us__container .contact__us__howto {
   color: #999999;

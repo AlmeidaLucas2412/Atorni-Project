@@ -8,10 +8,6 @@
   box-sizing: border-box;
 }
 
-img {
-  width: 25px;
-}
-
 a {
   text-decoration: none;
 }
@@ -83,11 +79,10 @@ li {
     }
 
 
-    &__image {
-      width: 15%;
-      min-width: 50px;
-      max-width: 50px;
-      filter: invert(58%) sepia(36%) saturate(675%) hue-rotate(358deg) brightness(92%) contrast(95%);
+    svg {
+      width: 3rem;
+      height: 3rem;
+      fill: $main-color;
 
       @media (min-width: 768px) {
         align-self: center;
@@ -131,12 +126,13 @@ li {
     .box__image {
       background-color: $main-color;
       height: fit-content;
-      padding: 0.5rem;
+      padding: 0.3rem;
 
 
-      img {
-        filter: invert(100%);
+      svg {
         width: 1.5rem;
+        height: 1.5rem;
+        fill: $lighter-icon_color;
         vertical-align: middle;
       }
     }
@@ -230,6 +226,7 @@ li {
       top: unset;
       bottom: 1rem;
       filter: invert(100%);
+
     }
   }
 
@@ -246,10 +243,15 @@ li {
       color: $dark-behind_color;
       font-size: 1.2rem;
       font-weight: 600;
+      transition: 0.4s;
 
       @media (min-width: 768px) {
         font-size: 1rem;
         font-weight: 500;
+      }
+
+      &:hover {
+        color: $main-color;
       }
     }
 
@@ -585,12 +587,13 @@ li {
 
 
 .reminder {
-  background: linear-gradient(rgba(193, 142, 60, 0.896), rgba(193, 142, 60, 0.896)), url(./images/legal-advicer.webp);
+  background: url(./images/legal-advicer.webp);
   background-size: cover;
   background-position: center;
   @include flex-column;
   width: 100%;
   padding: 2rem 0;
+  position: relative;
 
   @media (min-width: 768px) and (max-width: 1024px) {
     position: relative;
@@ -601,10 +604,21 @@ li {
     justify-content: center;
   }
 
+  .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: $main-color;
+    filter: opacity(0.8);
+    z-index: 10;
+  }  
+
   &__content {
     @include flex-column;
     padding: 1rem 0.5rem;
     gap: 0.5rem;
+    z-index: 15;
 
     @media (min-width: 1025px) {
       flex-direction: row;
@@ -704,12 +718,18 @@ footer {
         &__image {
           padding-left: 1rem;
 
-          img {
-            width: 10%;
-            filter: invert(58%) sepia(36%) saturate(675%) hue-rotate(358deg) brightness(92%) contrast(95%);
+          @media (min-width: 1025px) {
+            padding: unset;
+          }
+
+          svg {
+            width: 2.5rem;
+            height: 2.5rem;
+            fill: $main-color;
 
             @media (min-width: 1025px) {
-              width: 15%;
+              width: 3.5rem;
+              height: 3.5rem;
             }
           }
 
@@ -747,9 +767,10 @@ footer {
           padding: 0.3rem 0.6rem;
         }
 
-        img {
+        svg {
           width: 1rem;
-          filter: invert(100%);
+          height: 1rem;
+          fill: $lighter-icon_color;
           vertical-align: middle;
         }
       }
@@ -844,9 +865,11 @@ footer {
             display: flex;
             gap: 1rem;
 
-            &__icon img {
-              width: 1rem;
-              filter: invert(58%) sepia(36%) saturate(675%) hue-rotate(358deg) brightness(92%) contrast(95%);
+            &__icon svg {
+              width: 1.5rem;
+              height: 1.5rem;
+              fill: $main-color;
+
             }
 
             &__howto {

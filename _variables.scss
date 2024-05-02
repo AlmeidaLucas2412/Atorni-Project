@@ -1,27 +1,28 @@
 $primary-font: "Poppins", sans-serif;
 $secondary-font: "Cormorant Garamond", serif;
 
-$main-color:#C18E3C;
+$main-color: #C18E3C;
 
-$primary-bgcolor:#262626;
-$secondary-bgcolor:#f7f7f7;
-$tertiary-bgcolor:#191919;
-$card-bgcolor:#ffffff;
-$perfomance-image_bgcolor:#404040;
-$reminder__button__btn_bgcolor: #000000;
+$primary-bgcolor: #262626;
+$secondary-bgcolor: #f7f7f7;
+$tertiary-bgcolor: #191919;
+$card-bgcolor: #ffffff;
+$perfomance-image_bgcolor: #404040;
 $rights-bgcolor: #0D0D0D;
 
 $dark-behind_color: #ffffff;
 $sub-topic_color: #000000cc;
 $paragraph_color: #999999;
-$card__text__title_color:#000000;
+$card__text__title_color: #000000;
 
 //var para buttons
 
-$primary-button_bgcolor: #C18E3C;
+$primary-button_bgcolor: $main-color;
 $secondary-button_bgcolor: #000000;
 $tertiary-button_bgcolor: #ffffff;
 
 $primary-button_color: #ffffff;
 $secondary-button_color: #ffffff;
 $tertiary-button_color: #000000;
+
+$lighter-icon_color: #ffffff;
