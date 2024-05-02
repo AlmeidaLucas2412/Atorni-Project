@@ -367,6 +367,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -528,12 +532,12 @@ li {
   flex-direction: column;
   background-color: #262626;
   font-family: "Poppins", sans-serif;
-  padding: 5rem 2.5rem;
+  padding: 2rem 2.5rem;
   position: relative;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .navbar {
-    padding: 5rem 1rem;
+    padding: 2rem 1rem;
   }
 }
 @media (min-width: 1025px) {
@@ -559,6 +563,7 @@ li {
 @media (min-width: 1025px) {
   .navbar .icon {
     position: unset;
+    display: none;
   }
 }
 .navbar .icon img {
@@ -573,16 +578,28 @@ li {
   top: unset;
   bottom: 1rem;
   filter: invert(100%);
+  display: none;
+}
+.navbar .icon--search.search-active {
+  display: flex;
 }
 .navbar__list {
+  gap: 1rem;
+  padding: 1rem 0rem;
+  display: none;
+}
+.navbar__list.menu-open {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 @media (min-width: 1025px) {
   .navbar__list {
-    padding: 0rem 1rem;
+    display: flex;
     flex-direction: row;
+    padding: 0rem 1rem;
+  }
+  .navbar__list.menu-open {
+    flex-direction: unset;
   }
 }
 .navbar__list li a {
@@ -621,7 +638,7 @@ li {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding: 1rem;
+  padding: 2.5rem;
 }
 .introduction__container .introduction__title h1 {
   font-size: 3rem;
@@ -899,15 +916,16 @@ li {
   gap: 3rem;
   padding-top: 3rem;
 }
-@media (min-width: 1025px) {
-  .card__hover__container {
-    flex-direction: row;
-  }
-}
 @media (min-width: 768px) and (max-width: 1024px) {
   .card__hover__container {
     flex-direction: row;
     gap: 1rem;
+  }
+}
+@media (min-width: 1025px) {
+  .card__hover__container {
+    flex-direction: row;
+    padding: 3rem 2rem;
   }
 }
 
@@ -939,14 +957,14 @@ li {
   top: 0;
   background-color: #C18E3C;
   filter: opacity(0.8);
-  z-index: 10;
+  z-index: 5;
 }
 .reminder__content {
   display: flex;
   flex-direction: column;
   padding: 1rem 0.5rem;
   gap: 0.5rem;
-  z-index: 15;
+  z-index: 10;
 }
 @media (min-width: 1025px) {
   .reminder__content {

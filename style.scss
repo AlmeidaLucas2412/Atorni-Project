@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -182,11 +186,11 @@ li {
   @include flex-column;
   background-color: $primary-bgcolor;
   font-family: $primary-font;
-  padding: 5rem 2.5rem;
+  padding: 2rem 2.5rem;
   position: relative;
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    padding: 5rem 1rem;
+    padding: 2rem 1rem;
   }
 
   @media (min-width: 1025px) {
@@ -210,6 +214,7 @@ li {
 
     @media (min-width: 1025px) {
       position: unset;
+      display: none;
     }
 
 
@@ -226,17 +231,31 @@ li {
       top: unset;
       bottom: 1rem;
       filter: invert(100%);
+      display: none;
 
+      &.search-active{
+        display: flex;
+      }
     }
   }
 
   &__list {
-    @include flex-column;
     gap: 1rem;
+    padding: 1rem 0rem;
+    display: none;
+
+    &.menu-open {
+      @include flex-column;
+    }
 
     @media (min-width: 1025px) {
-      padding: 0rem 1rem;
+      display: flex;
       flex-direction: row;
+      padding: 0rem 1rem;
+
+      &.menu-open {
+        flex-direction: unset;
+      }
     }
 
     li a {
@@ -277,7 +296,7 @@ li {
   &__container {
     @include flex-column;
     gap: 4rem;
-    padding: 1rem;
+    padding: 2.5rem;
 
 
     .introduction__title h1 {
@@ -574,13 +593,14 @@ li {
   gap: 3rem;
   padding-top: 3rem;
 
-  @media (min-width: 1025px) {
-    flex-direction: row;
-  }
-
   @media (min-width: 768px) and (max-width: 1024px) {
     flex-direction: row;
     gap: 1rem;
+  }
+
+  @media (min-width: 1025px) {
+    flex-direction: row;
+    padding: 3rem 2rem;
   }
 }
 
@@ -604,21 +624,21 @@ li {
     justify-content: center;
   }
 
-  .overlay{
+  .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     background-color: $main-color;
     filter: opacity(0.8);
-    z-index: 10;
-  }  
+    z-index: 5;
+  }
 
   &__content {
     @include flex-column;
     padding: 1rem 0.5rem;
     gap: 0.5rem;
-    z-index: 15;
+    z-index: 10;
 
     @media (min-width: 1025px) {
       flex-direction: row;
