@@ -460,7 +460,7 @@ li {
 }
 .modal .affirmative:hover {
   border: 1px solid #C18E3C;
-  background-color: #f7f7f7;
+  background-color: transparent;
   color: #C18E3C;
   transform: unset;
 }
@@ -471,7 +471,7 @@ li {
 }
 .modal .negative:hover {
   border: 1px solid #C18E3C;
-  background-color: #f7f7f7;
+  background-color: transparent;
   color: #C18E3C;
   transform: unset;
 }
@@ -988,6 +988,9 @@ li {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   color: #999999;
+}
+.form__container .form__requirements .box .request:focus-visible {
+  outline: 2px solid #C18E3C;
 }
 .form__container .form__requirements .full__width__desktop {
   width: 100%;
