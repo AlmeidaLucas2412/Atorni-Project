@@ -1,9 +1,6 @@
 const toggleMenuClass = () => {
   let menu = document.querySelector(".navbar__list")
-  menu.classList.toggle("menu-open");
-
-  let search = document. querySelector(".icon--search")
-  search.classList.toggle("search-active");
+  menu.classList.toggle("menu-open")
 }
 
 const startEvents = () => {

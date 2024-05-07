@@ -160,11 +160,8 @@
   }
 }
 @media (min-width: 1025px) {
-  .card__image--higher {
-    width: 308px;
-    height: 206px;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .card__image {
+    height: 100%;
   }
 }
 .card__stamp {
@@ -386,13 +383,13 @@ li {
   padding: 1rem;
   font-size: 0.8rem;
   font-weight: 600;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.5s;
   border-radius: 10px;
 }
 .button:hover {
-  opacity: 0.6;
+  transform: scale(0.9);
 }
 .button--big {
   padding: 1.5rem;
@@ -409,6 +406,74 @@ li {
 .button--tertiary {
   background-color: #ffffff;
   color: #000000;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  text-align: center;
+  padding: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/legal-advicer.webp);
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  border: 2px solid #C18E3C;
+  border-radius: 3px;
+  animation: moveUP 1.5s ease;
+}
+@keyframes moveUP {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+.modal h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1rem 0rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.modal .affirmative {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.modal .affirmative:hover {
+  border: 1px solid #C18E3C;
+  background-color: #f7f7f7;
+  color: #C18E3C;
+  transform: unset;
+}
+.modal .negative {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.modal .negative:hover {
+  border: 1px solid #C18E3C;
+  background-color: #f7f7f7;
+  color: #C18E3C;
+  transform: unset;
 }
 
 .header {
@@ -580,6 +645,19 @@ li {
   filter: invert(100%);
   display: none;
 }
+@media (max-width: 1025px) {
+  .navbar .icon--search {
+    animation: appear 2s ease;
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
 .navbar .icon--search.search-active {
   display: flex;
 }
@@ -587,6 +665,19 @@ li {
   gap: 1rem;
   padding: 1rem 0rem;
   display: none;
+}
+@media (max-width: 1025px) {
+  .navbar__list {
+    animation: appear 2s ease;
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 .navbar__list.menu-open {
   display: flex;
@@ -650,6 +741,10 @@ li {
   font-size: 1.2rem;
   font-weight: 500;
   padding-top: 1.5rem;
+}
+.introduction .button {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .simple__content {
@@ -836,6 +931,7 @@ li {
 
 .form__container {
   background-color: #ffffff;
+  border: 2px solid #C18E3C;
 }
 @media (min-width: 1025px) {
   .form__container {
@@ -1109,6 +1205,10 @@ footer .footer__container .social__media a {
   background-color: #C18E3C;
   border-radius: 50%;
   padding: 0.3rem 0.6rem;
+  transition: 0.5s;
+}
+footer .footer__container .social__media a:hover {
+  transform: translateY(-0.5rem);
 }
 footer .footer__container .social__media svg {
   width: 1rem;

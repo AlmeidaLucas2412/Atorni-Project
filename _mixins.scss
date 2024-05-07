@@ -7,3 +7,16 @@
   display: flex;
   flex-direction: row-reverse;
 }
+
+@mixin appear-animation{
+  animation: appear 2s ease;
+
+  @keyframes appear{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+}
