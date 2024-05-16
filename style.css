@@ -3,6 +3,10 @@
   gap: 2rem;
   background-color: #191919;
   padding: 2rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 8rem;
+  min-width: 0;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .simple-card {
@@ -65,11 +69,6 @@
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-@media (min-width: 1025px) {
-  .simple-card .content__description {
-    text-wrap: nowrap;
-  }
-}
 .simple-card .content__description--gray {
   color: #999999;
   font-weight: normal;
@@ -78,11 +77,6 @@
 @media (min-width: 768px) {
   .simple-card .content__description--gray {
     font-size: 1rem;
-  }
-}
-@media (min-width: 1025px) {
-  .simple-card .content__description--gray {
-    text-wrap: wrap;
   }
 }
 .simple-card--lighter {
@@ -698,6 +692,7 @@ li {
   font-size: 1.2rem;
   font-weight: 600;
   transition: 0.4s;
+  white-space: nowrap;
 }
 @media (min-width: 768px) {
   .navbar__list li a {
@@ -713,7 +708,8 @@ li {
 }
 
 .introduction {
-  background: linear-gradient(rgba(0, 0, 0, 0.566), rgba(0, 0, 0, 0.566)), url(./images/experience.webp);
+  background: linear-gradient(rgba(0, 0, 0, 0.566), rgba(0, 0, 0, 0.566)), url(./images/experience.webp) no-repeat center center;
+  background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -760,14 +756,13 @@ li {
     justify-content: center;
   }
 }
-
 @media (min-width: 1025px) {
   .simple__content--top {
     flex-direction: row;
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-120px);
+    max-width: 100%;
+    height: 0;
+    justify-content: center;
   }
 }
 
