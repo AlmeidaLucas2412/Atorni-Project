@@ -152,37 +152,30 @@
   background-color: $card-bgcolor;
   position: relative;
   box-shadow: 1px 1px 12px $main-color;
+  flex: 1;
+
+  @media (min-width: 540px) and (max-width: 1024px) {
+    min-width: 40%;
+  }
+
+  @media (max-width: 540px) {
+    min-width: 100%;
+  }
 
   &__image {
     width: 100%;
-
-    @media (min-width: 768px) and (max-width: 1024px) {
-      height: 40vh;
-      object-fit: cover;
-    }
-
-    @media (min-width: 1025px) {
-      height: 100%;
-    }
+    object-fit: cover;
+    height: 16rem;
+    object-position: center top;
   }
 
   &__stamp {
     position: absolute;
     background-color: $secondary-bgcolor;
     border-radius: 50%;
-    bottom: 9rem;
+    top: 12rem;
     left: 1rem;
     max-width: fit-content;
-
-    @media (min-width: 768px) and (max-width: 1024px) {
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 24rem;
-    }
-
-    @media (min-width: 1025px) {
-      bottom: 11rem;
-    }
 
     svg {
       width: 4.5rem;

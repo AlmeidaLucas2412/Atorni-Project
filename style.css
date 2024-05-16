@@ -142,42 +142,34 @@
   background-color: #ffffff;
   position: relative;
   box-shadow: 1px 1px 12px #C18E3C;
+  flex: 1;
+}
+@media (min-width: 540px) and (max-width: 1024px) {
+  .card {
+    min-width: 40%;
+  }
+}
+@media (max-width: 540px) {
+  .card {
+    min-width: 100%;
+  }
 }
 .card__image {
   width: 100%;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .card__image {
-    height: 40vh;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-@media (min-width: 1025px) {
-  .card__image {
-    height: 100%;
-  }
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 16rem;
+  -o-object-position: center top;
+     object-position: center top;
 }
 .card__stamp {
   position: absolute;
   background-color: #f7f7f7;
   border-radius: 50%;
-  bottom: 9rem;
+  top: 12rem;
   left: 1rem;
   max-width: -moz-fit-content;
   max-width: fit-content;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .card__stamp {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 24rem;
-  }
-}
-@media (min-width: 1025px) {
-  .card__stamp {
-    bottom: 11rem;
-  }
 }
 .card__stamp svg {
   width: 4.5rem;
@@ -876,13 +868,9 @@ li {
 .cards__container {
   display: flex;
   flex-direction: column;
+  flex-flow: row wrap;
   padding: 4rem 0;
   gap: 2rem;
-}
-@media (min-width: 768px) {
-  .cards__container {
-    flex-direction: row;
-  }
 }
 @media (min-width: 1025px) {
   .cards__container {
