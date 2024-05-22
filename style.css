@@ -1078,6 +1078,15 @@ li {
 .reminder__content--center .reminder__buttons {
   flex-direction: row;
 }
+@media (max-width: 540px) {
+  .reminder__content--center .reminder__buttons {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 2rem;
+  }
+}
 
 .customer__container {
   display: flex;
@@ -1104,19 +1113,17 @@ footer {
 footer .footer__container {
   display: flex;
   flex-direction: column;
-  padding: 6rem 0.5rem 0rem 0.5rem;
+  padding: 6rem 1rem;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   footer .footer__container {
     flex-direction: row;
-    padding: 6rem 1rem 0rem 1rem;
     flex-wrap: wrap;
   }
 }
 @media (min-width: 1025px) {
   footer .footer__container {
     flex-direction: row;
-    padding: 5rem 3rem;
     justify-content: space-around;
   }
 }
@@ -1257,7 +1264,6 @@ footer .footer__container .footer__nav__explore__links a:hover {
 footer .footer__container .footer__nav .footer__nav__questions {
   display: flex;
   flex-direction: column;
-  padding-bottom: 5rem;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   footer .footer__container .footer__nav .footer__nav__questions {
@@ -1266,7 +1272,6 @@ footer .footer__container .footer__nav .footer__nav__questions {
 }
 @media (min-width: 1025px) {
   footer .footer__container .footer__nav .footer__nav__questions {
-    padding-bottom: unset;
     width: 65%;
   }
 }
