@@ -11,6 +11,13 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
+  font-family: $primary-font;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 a {
@@ -136,61 +143,52 @@ li {
   }
 }
 
-.header {
+.logo {
   @include flex-column;
-  padding: 2rem;
-  background-color: $tertiary-bgcolor;
-  font-family: $primary-font;
 
   @media (min-width: 768px) {
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
+    order: 1;
+    text-align: center;
   }
 
-  @media (min-width: 1025px) {
-    position: relative;
-  }
-
-  .logo {
-    @include flex-column;
+  svg {
+    width: 3rem;
+    height: 3rem;
+    fill: $main-color;
 
     @media (min-width: 768px) {
-      order: 1;
-      text-align: center;
+      align-self: center;
     }
+  }
 
-    svg {
-      width: 3rem;
-      height: 3rem;
-      fill: $main-color;
+  .brand__name {
+    color: $dark-behind_color;
+    font-weight: bold;
+    line-height: 0.8;
+  }
 
-      @media (min-width: 768px) {
-        align-self: center;
-      }
-    }
+  .brand__area {
+    font-size: 1rem;
+    font-weight: bold;
+    color: $main-color;
+  }
+}
 
-    .brand__name {
-      font-size: 2.5rem;
-      color: $dark-behind_color;
-      font-weight: bold;
-      line-height: 0.8;
+.header {
+  display: none;
+  padding: 2rem;
+  background-color: $tertiary-bgcolor;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  position: relative;
 
-      @media (min-width: 768px) {
-        font-size: 1.5rem;
-      }
-    }
+  @media (min-width: 1025px) {
+    display: flex;
+  }
 
-    .brand__area {
-      font-size: 1rem;
-      font-weight: bold;
-      color: $main-color;
-
-      @media (min-width: 768px) {
-        font-size: 0.8rem;
-        text-wrap: nowrap;
-      }
-    }
+  .brand__name {
+    font-size: 1.5rem;
   }
 
   .contact {
@@ -256,28 +254,38 @@ li {
 
 .navbar {
   position: sticky;
+  align-items: baseline;
   top: 0;
   z-index: 15;
 
   @include flex-column;
   background-color: $primary-bgcolor;
-  font-family: $primary-font;
-  padding: 2rem 2.5rem;
+  padding: 1rem;
   box-shadow: 0 5px 10px $rights-bgcolor;
 
-  @media (min-width: 768px) and (max-width: 1024px) {
-    padding: 2rem 1rem;
+  .mobile-navbar {
+    display: flex;
+    width: 100%;
+  }
+
+  .logo {
+    flex-direction: row;
+    margin: 0 auto;
+    gap: 1rem;
+    text-align: left;
+    align-items: end;
   }
 
   @media (min-width: 1025px) {
     flex-direction: row;
-    padding: 1rem;
     justify-content: center;
+    .logo,
+    .mobile-navbar {
+      display: none;
+    }
   }
 
   .icon {
-    position: absolute;
-    top: 1rem;
     background-color: unset;
     border: none;
     cursor: pointer;
@@ -381,7 +389,6 @@ li {
     }
 
     .introduction__title p {
-      font-family: $primary-font;
       color: $paragraph_color;
       font-size: 1.2rem;
       font-weight: 500;
@@ -428,7 +435,6 @@ li {
     align-items: center;
 
     &__title {
-      font-family: $primary-font;
       color: $main-color;
       align-items: center;
       font-weight: 600;
@@ -479,7 +485,6 @@ li {
   }
 
   .section__description {
-    font-family: $primary-font;
     font-size: 1rem;
     color: $paragraph_color;
     text-align: center;
@@ -574,7 +579,6 @@ li {
   .form {
     @include flex-column;
     padding: 2rem;
-    font-family: $primary-font;
 
     &__intro {
       @include flex-column;
@@ -619,7 +623,6 @@ li {
           padding: 1rem;
           font-size: 1rem;
           font-weight: 500;
-          font-family: $primary-font;
           color: $paragraph_color;
 
           &:focus-visible {
@@ -641,7 +644,6 @@ li {
         border: none;
         padding: 1rem 1.5rem;
         border-radius: 5px;
-        font-family: $primary-font;
         color: $dark-behind_color;
         font-weight: 500;
         cursor: pointer;
@@ -722,7 +724,6 @@ li {
       }
 
       .reminder__sub {
-        font-family: $primary-font;
         color: $dark-behind_color;
         font-weight: 300;
       }
@@ -760,7 +761,6 @@ li {
 footer {
   @include flex-column;
   background-color: $tertiary-bgcolor;
-  font-family: $primary-font;
 
   .footer__container {
     @include flex-column;
@@ -822,7 +822,6 @@ footer {
           font-size: 0.8rem;
           font-weight: bold;
           color: $main-color;
-          font-family: $primary-font;
         }
       }
 

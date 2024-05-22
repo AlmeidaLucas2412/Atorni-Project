@@ -352,6 +352,14 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  font-family: "Poppins", sans-serif;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 a {
@@ -462,66 +470,53 @@ li {
   transform: unset;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  background-color: #191919;
-  font-family: "Poppins", sans-serif;
-}
-@media (min-width: 768px) {
-  .header {
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
-  }
-}
-@media (min-width: 1025px) {
-  .header {
-    position: relative;
-  }
-}
-.header .logo {
+.logo {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  .header .logo {
+  .logo {
     order: 1;
     text-align: center;
   }
 }
-.header .logo svg {
+.logo svg {
   width: 3rem;
   height: 3rem;
   fill: #C18E3C;
 }
 @media (min-width: 768px) {
-  .header .logo svg {
+  .logo svg {
     align-self: center;
   }
 }
-.header .logo .brand__name {
-  font-size: 2.5rem;
+.logo .brand__name {
   color: #ffffff;
   font-weight: bold;
   line-height: 0.8;
 }
-@media (min-width: 768px) {
-  .header .logo .brand__name {
-    font-size: 1.5rem;
-  }
-}
-.header .logo .brand__area {
+.logo .brand__area {
   font-size: 1rem;
   font-weight: bold;
   color: #C18E3C;
 }
-@media (min-width: 768px) {
-  .header .logo .brand__area {
-    font-size: 0.8rem;
-    text-wrap: nowrap;
+
+.header {
+  display: none;
+  padding: 2rem;
+  background-color: #191919;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  position: relative;
+}
+@media (min-width: 1025px) {
+  .header {
+    display: flex;
   }
+}
+.header .brand__name {
+  font-size: 1.5rem;
 }
 .header .contact {
   display: flex;
@@ -580,30 +575,37 @@ li {
 
 .navbar {
   position: sticky;
+  align-items: baseline;
   top: 0;
   z-index: 15;
   display: flex;
   flex-direction: column;
   background-color: #262626;
-  font-family: "Poppins", sans-serif;
-  padding: 2rem 2.5rem;
+  padding: 1rem;
   box-shadow: 0 5px 10px #0D0D0D;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  .navbar {
-    padding: 2rem 1rem;
-  }
+.navbar .mobile-navbar {
+  display: flex;
+  width: 100%;
+}
+.navbar .logo {
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 1rem;
+  text-align: left;
+  align-items: end;
 }
 @media (min-width: 1025px) {
   .navbar {
     flex-direction: row;
-    padding: 1rem;
     justify-content: center;
+  }
+  .navbar .logo,
+  .navbar .mobile-navbar {
+    display: none;
   }
 }
 .navbar .icon {
-  position: absolute;
-  top: 1rem;
   background-color: unset;
   border: none;
   cursor: pointer;
@@ -719,7 +721,6 @@ li {
   font-family: "Cormorant Garamond", serif;
 }
 .introduction__container .introduction__title p {
-  font-family: "Poppins", sans-serif;
   color: #999999;
   font-size: 1.2rem;
   font-weight: 500;
@@ -765,7 +766,6 @@ li {
   align-items: center;
 }
 .section .section__intro__title {
-  font-family: "Poppins", sans-serif;
   color: #C18E3C;
   align-items: center;
   font-weight: 600;
@@ -819,7 +819,6 @@ li {
   }
 }
 .section--black .section__description {
-  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   color: #999999;
   text-align: center;
@@ -920,7 +919,6 @@ li {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  font-family: "Poppins", sans-serif;
 }
 .form__container .form__intro {
   display: flex;
@@ -964,7 +962,6 @@ li {
   padding: 1rem;
   font-size: 1rem;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
   color: #999999;
 }
 .form__container .form__requirements .box .request:focus-visible {
@@ -981,7 +978,6 @@ li {
   border: none;
   padding: 1rem 1.5rem;
   border-radius: 5px;
-  font-family: "Poppins", sans-serif;
   color: #ffffff;
   font-weight: 500;
   cursor: pointer;
@@ -1066,7 +1062,6 @@ li {
   }
 }
 .reminder__content .reminder__text .reminder__sub {
-  font-family: "Poppins", sans-serif;
   color: #ffffff;
   font-weight: 300;
 }
@@ -1105,7 +1100,6 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: #191919;
-  font-family: "Poppins", sans-serif;
 }
 footer .footer__container {
   display: flex;
@@ -1171,7 +1165,6 @@ footer .footer__container .social__logo .social__brand__area {
   font-size: 0.8rem;
   font-weight: bold;
   color: #C18E3C;
-  font-family: "Poppins", sans-serif;
 }
 footer .footer__container .social__text {
   color: #999999;
