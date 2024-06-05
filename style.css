@@ -402,6 +402,32 @@ li {
   color: #000000;
 }
 
+.float-button {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 1rem;
+  right: 4rem;
+  z-index: 50;
+  box-shadow: 2px 2px gray;
+  color: white;
+  background-color: #C18E3C;
+  gap: 0.5rem;
+  border-radius: 50px;
+  padding: 0.5rem;
+}
+@media (max-width: 768px) {
+  .float-button {
+    right: 1rem;
+  }
+  .float-button h3 {
+    display: none;
+  }
+}
+.float-button svg {
+  fill: #C18E3C;
+}
+
 .backdrop {
   display: none;
   position: fixed;

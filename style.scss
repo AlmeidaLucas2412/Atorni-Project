@@ -65,6 +65,35 @@ li {
   }
 }
 
+.float-button {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 1rem;
+  right: 4rem;
+  z-index: 50;
+  box-shadow: 2px 2px gray;
+  color: white;
+  background-color: $main-color;
+  gap: 0.5rem;
+  border-radius: 50px;
+  padding: 0.5rem;
+
+  @media(max-width: 768px) {
+    right: 1rem;
+
+    h3{
+      display: none;
+    }
+  }
+
+
+  svg {
+    fill: $main-color;
+  }
+}
+
+
 .backdrop {
   display: none;
   position: fixed;
@@ -279,6 +308,7 @@ li {
   @media (min-width: 1025px) {
     flex-direction: row;
     justify-content: center;
+
     .logo,
     .mobile-navbar {
       display: none;
@@ -422,6 +452,7 @@ li {
     }
   }
 }
+
 //Primeira Section
 
 .section {
@@ -739,6 +770,7 @@ li {
 
       .reminder__buttons {
         flex-direction: row;
+
         @media (max-width: 540px) {
           display: flex;
           flex-flow: column;
